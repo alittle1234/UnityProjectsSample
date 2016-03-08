@@ -1,0 +1,42 @@
+<ScreenPlay>
+<!--
+dialog
+stage movements
+characters
+events(someting falls, someone leaves, someone hits)
+props
+actors
+-->
+<D actor="player" when="entry1" target="character1">
+Hello, How are you?
+	<D actor="character1" when="auto" target="player">
+	Fine. How are you?
+		<D actor="player" when="choice" target="character1">
+		Good. Where is the bathroom?
+			<D actor="character1" when="auto" target="player" set="entry2">
+			Well!  Good day to you!
+			</D>
+		</D>
+		<D actor="player" when="choice" target="character1">
+		Bad. I hate you.
+			<D actor="character1" when="auto" target="player" set="entry2">
+			Well!  Good day to you!
+			</D>
+		</D>
+		<D actor="player" when="choice" target="character1">
+		So so. I'm lost.
+			<D actor="character1" when="auto" target="player" set="entry2">
+			Well!  Good day to you!
+			</D>
+		</D>
+	</D>
+</D>
+
+<D actor="player" when="entry2" target="character1">
+Hello, How are you?
+	<D actor="character1" when="auto" target="player">
+	We have already spoken!
+	</D>
+</D>
+
+</ScreenPlay>

@@ -1,0 +1,110 @@
+{
+"locations":[
+{"varname":  "locationX",
+"title_txt": "locationTitle1",
+
+    // ========= ROOMS =========== 
+    
+    // --- room 1--- 
+    
+    "rooms":[
+        {
+            "varname":   "room1",
+            "view_txt":  "room1Desc",
+
+            "options":[
+                {
+                    "varname":   "goForward1",
+                    "label_txt": "goToRoom2",
+                    "script_varname":  "goToRoom2"
+                } 
+            ] 
+        },
+
+        // --- room 2--- 
+        {
+            "varname":   "room2",
+            "view_txt":  "room2Desc",
+
+            "options":[
+                {
+                    "varname":   "goForward2",
+                    "label_txt": "goToRoom3",
+                    "script_varname":  "goToRoom3"
+                },
+                {
+                    "varname":   "goBackward2",
+                    "label_txt": "goToRoom1",
+                    "script_varname":  "goToRoom1"
+                } 
+            ]
+        },
+
+        // --- room 3--- 
+        {
+            "varname":   "room3",
+            "view_txt":  "room3Desc",
+            
+            "items":[
+                {
+                    "itemVarname":"character1",
+                    "state":"active",
+                    "stage":"entry1"
+                }
+            ],
+
+            "options":[
+                {
+                    "varname":   "goBackward1",
+                    "label_txt": "goToRoom2",
+                    "script_varname":  "goToRoom2"
+                } 
+            ]
+        }
+    ],// --- rooms end---
+
+"exits":[{"stageExits":[{"varname":"exitStage1Room1_1","description_txt":"description2"}]}]
+}],
+
+
+
+"player":{"locationVarName":"locationX","roomVarName":"room1"},
+
+"levelItems":[{"varname":"character1",
+          "name_txt":"char1Name",
+          "itemType":"character",
+          "x":"12.2","y":"1?"}],
+
+
+"panels":[
+    {"varname":"panel1",
+    "name_txt":"panelmain",
+    "x":55,  "y":14,
+    "h":50,   "w":100}
+],
+
+
+
+"scripts":[
+    {
+        "varname":"goToRoom1",
+        "script":"movePlayer",
+        "target":["room1"]
+    },
+    {
+        "varname":"goToRoom2",
+        "script":"movePlayer",
+        "target":["room2"]
+    },
+    {
+        "varname":"goToRoom3",
+        "script":"movePlayer",
+        "target":["room3"]
+    },
+    {
+        "varname":"dialog",
+        "script":"movePlayer",
+        "target":["room3"]
+    }
+]
+}

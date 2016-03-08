@@ -1,0 +1,12 @@
+<Library>
+<Text text="someText" content="Some Content."/>
+<Text text="text" content="Some Content. Say what you will."/>
+
+<Text text="room1Desc" content="You are in Room 1."/>
+<Text text="room2Desc" content="You are in Room 2."/>
+<Text text="room3Desc" content="You are in Room 3."/>
+
+<Text text="goToRoom1" content="Go to Room 1."/>
+<Text text="goToRoom2" content="Go to Room 2."/>
+<Text text="goToRoom3" content="Go to Room 3."/>
+</Library>
